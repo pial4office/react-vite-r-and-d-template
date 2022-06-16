@@ -31,7 +31,7 @@ function ComponentTwo() {
 
   return (
     <div className="border border-success m-2 p-4">
-      <h3>Component Two</h3>
+      <h3 className="font-monospace">Component Two</h3>
     </div>
   );
 }

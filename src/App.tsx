@@ -34,7 +34,7 @@ function App() {
         count is: {count}
       </button>
 
-      <h2>App</h2>
+      <h2 className="font-monospace">App</h2>
 
       <ComponentOne />
       <ComponentTwo />
