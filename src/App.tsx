@@ -26,15 +26,15 @@ function App() {
 
   return (
     <div className="App border border-warning m-4 p-2">
+      <h2 className="font-monospace">App</h2>
+
       <button
         type="button"
-        className="btn btn-primary"
+        className="btn btn-sm btn-primary"
         onClick={() => setCount((count) => count + 1)}
       >
         count is: {count}
       </button>
-
-      <h2 className="font-monospace">App</h2>
 
       <ComponentOne />
       <ComponentTwo />
