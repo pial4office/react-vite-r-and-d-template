@@ -8,18 +8,19 @@ const log = console.log;
 
 function App() {
   Console.printBorder('App');
+  log(chalk.magenta.bold('Executed lines inside 👉 App (outside return)'));
 
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    log(chalk.bgYellowBright('Initial Mount'));
+    log(chalk.bgYellowBright('Initial Mount 👉 App'));
   }, []);
 
   useEffect(() => {
-    log(chalk.bgRedBright.bold.whiteBright('Component mounted'));
+    log(chalk.bgRedBright.bold.whiteBright('Component mounted 👉 App'));
 
     return () => {
-      log(chalk.bgRed.bold.whiteBright('Component unmounted'));
+      log(chalk.bgRed.bold.whiteBright('Component unmounted 👉 App'));
     };
   });
 
@@ -32,6 +33,8 @@ function App() {
       >
         count is: {count}
       </button>
+
+      <h2>App</h2>
 
       <ComponentOne />
       <ComponentTwo />

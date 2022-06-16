@@ -5,20 +5,27 @@ const log = console.log;
 
 function ComponentTwo() {
   Console.printBorder('Component Two');
+  log(
+    chalk.magenta.bold(
+      'Executed lines inside 👉 Component Two (outside return)'
+    )
+  );
 
   useEffect(() => {
-    log(chalk.bgYellowBright('Initial Mount'));
+    log(chalk.bgYellowBright('Initial Mount 👉 Component Two'));
 
     return () => {
-      log(chalk.bgRed.bold.whiteBright('Component unmounted'));
+      log(chalk.bgRed.bold.whiteBright('Component unmounted 👉 Component Two'));
     };
   }, []);
 
   useEffect(() => {
-    log(chalk.bgRedBright.bold.whiteBright('Component mounted'));
+    log(
+      chalk.bgRedBright.bold.whiteBright('Component mounted 👉 Component Two')
+    );
 
     return () => {
-      log(chalk.bgRed.bold.whiteBright('Component unmounted'));
+      log(chalk.bgRed.bold.whiteBright('Component unmounted 👉 Component Two'));
     };
   });
 
